@@ -6,6 +6,7 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
   background: #5636d3;
+  width: 100%;
   padding: 30px 0;
 
   header {
@@ -17,11 +18,17 @@ export const Container = styled.div<ContainerProps>`
     justify-content: space-between;
 
     nav {
+      display: flex;
       a {
         color: #fff;
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+
+        &.selected {
+          padding-bottom: 10px;
+          border-bottom: 2px solid #ff872c;
+        }
 
         & + a {
           margin-left: 32px;
